@@ -11,3 +11,13 @@ Este arquivo deve ser atualizado em ordem cronológica ao final de cada etapa. N
 - Testes/build: não executados.
 - Commit/PR: não criado nesta auditoria.
 - Limitação: ambiente da auditoria não disponibilizou ações de escrita no GitHub e não continha uma cópia local do projeto para executar comandos.
+
+## 14/11/2026 — Etapa 2: reescrita do app do visitante (revisão por IA)
+
+- Objetivo: corrigir bugs encontrados na revisão do `App.tsx` e deixar o app consistente em celular (Expo Go) e computador (web).
+- Arquivos: `App.tsx` (agora só roteia), `src/theme.ts`, `src/data.ts`, `src/store.tsx`, `src/ui.tsx`, `src/screens/{entry,main,stand,shared}.tsx`, `package.json`, `tsconfig.json`.
+- Corrigido: área segura no Android (react-native-safe-area-context); estado global persistente (AsyncStorage) para favoritos, cupons, lembretes, preferências e interesses; switches que resetavam ao trocar de aba; contador de favoritos inconsistente; cupom resgatado agora vai para a carteira; dias, filtros, busca do mapa, abas de cupons e botões do perfil agora funcionam; formulário de conta com validação e sem credenciais pré-preenchidas; checkbox de aceite funcional; ícones vetoriais no lugar de caracteres unicode; botão voltar do Android; layout centralizado (480 px) no computador.
+- Honestidade/escopo: faixas "modo demonstração" na interface; check-in e validação de cupom são simulados e rotulados; QR e códigos são ilustrativos; permissões reais só no Android (PermissionsAndroid), simuladas na web/iOS; sem backend, sem BLE, sem notificações reais.
+- Comandos executados: `npx tsc --noEmit` (sem erros); `npx expo export --platform web` e `--platform android` (bundles gerados com sucesso); `npx expo install --fix`.
+- NÃO executado: teste em aparelho físico, captura de tela/teste visual no navegador, `npm run lint` (não há script).
+- Próximo passo: abrir no Expo Go (Android), conferir visualmente cada tela e as permissões reais; depois decidir BLE (development build).
