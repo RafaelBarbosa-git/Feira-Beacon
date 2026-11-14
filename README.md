@@ -26,3 +26,16 @@ As páginas 1–10 do protótipo são do aplicativo móvel do visitante. As pág
 ## Decisões
 
 App em português, modo convidado por padrão, interface demonstrativa com dados fictícios. Não afirmar rastreamento preciso: iBeacon estima proximidade por RSSI. Notificações respeitam limite especificado de quatro por hora e intervalo de 30 minutos por beacon (ainda não implementado).
+
+## Continuidade entre IAs
+
+Antes de alterar o projeto, qualquer IA deve seguir as regras de [`AGENTS.md`](AGENTS.md) e ler o ponto de retomada em [`docs/AI_HANDOFF.md`](docs/AI_HANDOFF.md).
+
+Documentação de apoio:
+- [`docs/PROJECT_STATUS.md`](docs/PROJECT_STATUS.md): estado conhecido do projeto.
+- [`docs/REQUIREMENTS_TRACEABILITY.md`](docs/REQUIREMENTS_TRACEABILITY.md): rastreabilidade dos requisitos RF/RNF.
+- [`docs/DECISIONS.md`](docs/DECISIONS.md): decisões e questões em aberto.
+- [`docs/EXECUTION_LOG.md`](docs/EXECUTION_LOG.md): histórico das etapas e verificações.
+- [`CONTINUE_PROMPT.md`](CONTINUE_PROMPT.md): prompt para iniciar uma nova IA.
+
+Ao concluir cada etapa, atualize os documentos de continuidade e confira o histórico Git antes de iniciar trabalho novo.
