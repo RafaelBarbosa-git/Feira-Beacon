@@ -1,0 +1,1 @@
+{"expo":{"name":"FeiraBeacon","slug":"feira-beacon","version":"1.0.0","orientation":"portrait","userInterfaceStyle":"light","android":{"package":"br.com.feirabeacon.app","permissions":["android.permission.BLUETOOTH_SCAN","android.permission.BLUETOOTH_CONNECT","android.permission.ACCESS_FINE_LOCATION","android.permission.POST_NOTIFICATIONS"]}}}
